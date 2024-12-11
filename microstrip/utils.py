@@ -64,50 +64,25 @@ def microstripWavelength(lambda_0, er, w, h):
 def msLength(theta, lambda_s):
     return theta/360 * lambda_s
 
+
+# Calculate electrical length in substrate
 def electricalLength(L, lambda_s):
         if L == 0:
             return 0
         else:
-            return (360*np.abs(L)) / lambda_s
+            return 360*np.abs(L) / lambda_s
 
 
-    
-def mitred(W, h):
-# https://www.everythingrf.com/rf-calculators/microstrip-mitred-bend-calculator
+# def mitred(W, h):
+# # https://www.everythingrf.com/rf-calculators/microstrip-mitred-bend-calculator
 
-    D = W * np.sqrt(2)
-    X = W*np.sqrt(2)*(0.52+0.65*np.exp(-1.35*W/h))
+#     D = W * np.sqrt(2)
+#     X = W*np.sqrt(2)*(0.52+0.65*np.exp(-1.35*W/h))
 
-    M = X/D                         # Constant for ADS
+#     M = X/D                         # Constant for ADS
 
-    A = X*np.sqrt(2) - W    
+#     A = X*np.sqrt(2) - W    
 
-    a = (W+A)/2
-    diagonal = np.sqrt(2*a**2)      # Added path length
-    return M, diagonal
-
-
-# Simulate
-
-# def Zin(MLIN, ZL, f):
-#     w = MLIN.getW()    
-#     L = MLIN.getL()
-#     sub = MLIN.getSubstrate()
-
-#     Zin_values = []  # Initialize a list to store Zin for each frequency
-    
-#     if isinstance(f, list):
-#         for i in range(len(f)):
-#             Z0, theta = analyze(f[i], w, L, sub, True, False)
-#             t = np.tan(np.radians(theta))
-#             Zin = Z0 * (ZL + 1j * Z0 * t) / (Z0 + 1j * ZL * t)
-            
-#             Zin_values.append(Zin)  # Store the result for each frequency
-
-#             return Zin_values
-#     else:
-#         Z0, theta = analyze(f, w, L, sub, True, False)
-#         t = np.tan(np.radians(theta))
-#         Zin = Z0 * (ZL + 1j * Z0 * t) / (Z0 + 1j * ZL * t)
-        
-#         return Zin
+#     a = (W+A)/2
+#     diagonal = np.sqrt(2*a**2)      # Added path length
+#     return M, diagonal
