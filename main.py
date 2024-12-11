@@ -1,5 +1,5 @@
-from RF.microstrip import *
-from RF.microstrip.mlcalc import *
+from microstrip import *
+from microstrip.mlcalc import *
 
 freq = 3e9
 

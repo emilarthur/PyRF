@@ -1,5 +1,5 @@
-from RF.microstrip.utils import *
-from RF.microstrip.mlcalc.analyze import *
+from microstrip.utils import *
+from microstrip.mlcalc.analyze import *
 
 def synthesize(**kwargs):
     Z0 = kwargs.get("Z0")

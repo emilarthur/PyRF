@@ -1,4 +1,4 @@
-from RF.microstrip.utils import *
+from microstrip.utils import *
 
 def analyze(**kwargs):
     f = kwargs.get("f")
