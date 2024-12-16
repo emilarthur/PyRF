@@ -24,8 +24,8 @@ Characteristic impedance of a microstrip line
 For $W/h\leq1$:
 
 $$
-Z_0=\frac{60}{\sqrt{\varepsilon_{r,eff}}}\ln\left(8\frac>{h}{W}+0.25\frac{W}{h}\right)
->$$
+Z_0=\frac{60}{\sqrt{\varepsilon_{r,eff}}}\ln\left(8\frac{h}{W}+0.25\frac{W}{h}\right)
+$$
 where
 $$
 \varepsilon_{r,eff}=\frac{\varepsilon_{r}+1}{2}+\frac{\varepsilon_{r}-1}{2}\left[\left(1+12\frac{h}{W}\right)^{-0.5}+0.04\left(1-\frac{W}{h}\right)^2\right]
