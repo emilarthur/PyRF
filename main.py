@@ -8,7 +8,10 @@ freq = 3e9
 sub = Substrate(name="sub", h=0.635e-3, t=35e-6, er=10.2, tanD=0)
 W, L = synthesize(Z0=50,f=freq, theta=90, substrate=sub,thickness=True, disp=True)
 
+print(f"W: {W*1e6:.2f} um")
+print(f"L: {L*1e6:.2f} um")
 
+print()
 # Binomal Transformer
 N = 3   # Number of sections
 Z0 = 100  # Source impedance
