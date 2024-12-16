@@ -5,6 +5,8 @@ This script can analyze and synthesize microstrip parameters based on Guillermo 
 
 Note that losses (α) are not accounted for.
 
+
+## Microstrip
 ```py
 from microstrip import *
 from microstrip.mlcalc import *
@@ -18,7 +20,6 @@ Calculate width and length
 ```py
 W, L = synthesize(Z0=50,f=3e9, theta=90, substrate=RO6010,thicknesss=True, disp=True)
 ```
-## Microstrip
 Characteristic impedance of a microstrip line
 
 For $W/h\leq1$:
@@ -58,3 +59,26 @@ $$
 $$
 
 
+## Transformers
+Binomial transformer
+```py
+from matching.transformers import binomial
+```
+
+Example
+```py
+N = 3   # Number of sections
+Z0 = 100  # Source impedance
+ZL = 50  # Load impedance
+
+Zx = binomial(N, Z0, ZL)
+
+for i in range(1,N+1):
+    print(f"{Zx[i-1]:.2f}")
+```
+Output:
+```
+91.70
+70.71
+54.53
+```
