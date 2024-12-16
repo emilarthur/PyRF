@@ -37,4 +37,4 @@ Waveength in the microstrip line
 >For $W/h\geq0.6$:
 >$$
 \lambda=\frac{\lambda_0}{\sqrt{\varepsilon_r}}\left[\frac{\varepsilon_r}{1+0.63(\varepsilon_r-1)(W/h)^{0.1255}}\right]
-$$
+>$$
