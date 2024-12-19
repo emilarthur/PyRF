@@ -16,7 +16,7 @@ RO6010 = Substrate(name="RO6010", h=0.635e-3, t=35e-6, er=10.2, tanD=0)
 ```
 Calculate width and length
 ```py
-W, L = synthesize(Z0=50,f=3e9, theta=90, substrate=RO6010,thicknesss=True, disp=True)
+W, L = synthesize(Z0=50,f=3e9, theta=90, substrate=RO6010,thickness=True, disp=True)
 ```
 ## Microstrip
 Characteristic impedance of a microstrip line
