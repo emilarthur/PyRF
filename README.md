@@ -67,7 +67,7 @@ $$
 $$ -->
 
 
-## Transformers
+## Quarter Wave Transformers
 Binomial transformer
 ```py
 from matching.transformers import binomial
