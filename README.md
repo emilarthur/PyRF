@@ -11,7 +11,7 @@ Note that losses (α) are not accounted for.
 from microstrip import *
 from microstrip.mlcalc import *
 ```
-### Example
+Example
 Instanciate a substrate
 ```py
 RO6010 = Substrate(name="RO6010", h=0.635e-3, t=35e-6, er=10.2, tanD=0)
@@ -19,6 +19,7 @@ RO6010 = Substrate(name="RO6010", h=0.635e-3, t=35e-6, er=10.2, tanD=0)
 Calculate width and length
 ```py
 W, L = synthesize(Z0=50,f=3e9, theta=90, substrate=RO6010,thicknesss=True, disp=True)
+
 print(f"W: {W*1e6:.2f} um")
 print(f"L: {L*1e6:.2f} um")
 ```
@@ -68,7 +69,7 @@ $$ -->
 
 
 ## Transformers
-Binomial transformer
+### Binomial transformer
 ```py
 from matching.transformers import binomial
 ```
